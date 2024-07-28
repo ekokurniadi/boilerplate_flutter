@@ -35,10 +35,10 @@ class PermissionHandlerService {
 
       if (askPermissionList.isNotEmpty) {
         final statuses = await askPermissionList.request();
-        print('PERMISSION CAMERA STATUS - ${statuses[Permission.camera]}');
-        print('PERMISSION LOCATION STATUS - ${statuses[Permission.location]}');
-        print('PERMISSION PHONE STATUS - ${statuses[Permission.phone]}');
-        print('PERMISSION STORAGE STATUS - ${statuses[Permission.storage]}');
+        log('PERMISSION CAMERA STATUS - ${statuses[Permission.camera]}');
+        log('PERMISSION LOCATION STATUS - ${statuses[Permission.location]}');
+        log('PERMISSION PHONE STATUS - ${statuses[Permission.phone]}');
+        log('PERMISSION STORAGE STATUS - ${statuses[Permission.storage]}');
         await checkPermissionExternalStorage();
       }
     } else {
